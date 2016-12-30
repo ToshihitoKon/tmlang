@@ -1,0 +1,9 @@
+put Hello,world
+set 10
+print
+int tml
+save tml
+set 5
+print
+load tml
+print
