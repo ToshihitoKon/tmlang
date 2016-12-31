@@ -1,0 +1,38 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ERROR_H	src/error.h	2;"	d
+EXEC_H	src/exec.h	2;"	d
+MCODE_H	src/mcode.h	2;"	d
+MM_H	src/mm.h	2;"	d
+Mcode	src/mcode.h	/^typedef struct Mcode$/;"	s
+Mcode	src/mcode.h	/^} Mcode;$/;"	t	typeref:struct:Mcode
+PARSER_H	src/parser.h	2;"	d
+Type	src/mm.h	/^typedef struct Type {$/;"	s
+Type	src/mm.h	/^} Type;$/;"	t	typeref:struct:Type
+err_output_error	src/error.c	/^void err_output_error(char* where, char* msg)$/;"	f
+exc_exec	src/exec.c	/^int exc_exec()$/;"	f
+main	src/main.c	/^int main(int argc, char** argv)$/;"	f
+mcd_add_mcode	src/mcode.c	/^int mcd_add_mcode(char* opecode, char* parameter, int type, int nice)$/;"	f
+mcd_get_mcode	src/mcode.c	/^Mcode mcd_get_mcode(int num)$/;"	f
+mcd_init	src/mcode.c	/^int mcd_init()$/;"	f
+mcd_isExist_mcode	src/mcode.c	/^bool mcd_isExist_mcode(int num)$/;"	f
+mcd_mcode_addr	src/mcode.h	/^Mcode* mcd_mcode_addr;$/;"	v
+mcd_mcode_num	src/mcode.h	/^int mcd_mcode_num;$/;"	v
+mm_add_variable	src/mm.c	/^int mm_add_variable(char* name)$/;"	f
+mm_dbg_print	src/mm.c	/^void mm_dbg_print()$/;"	f
+mm_get_value	src/mm.c	/^int mm_get_value(char* name)$/;"	f
+mm_init	src/mm.c	/^void mm_init()$/;"	f
+mm_set_value	src/mm.c	/^int mm_set_value(char* name, int value)$/;"	f
+mm_var_addr	src/mm.h	/^Type *mm_var_addr;$/;"	v
+mm_var_num	src/mm.h	/^int mm_var_num;$/;"	v
+name	src/mm.h	/^    char name[32];$/;"	m	struct:Type
+nice	src/mcode.h	/^    int     nice;$/;"	m	struct:Mcode
+opecode	src/mcode.h	/^    char    opecode[32];$/;"	m	struct:Mcode
+parameter	src/mcode.h	/^    char    parameter[64];$/;"	m	struct:Mcode
+psr_add_mcode	src/parser.c	/^int psr_add_mcode(char* state)$/;"	f
+type	src/mcode.h	/^    int     type;$/;"	m	struct:Mcode
+value	src/mm.h	/^    int value; $/;"	m	struct:Type

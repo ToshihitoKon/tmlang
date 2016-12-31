@@ -7,3 +7,7 @@ set 5
 print
 load tml
 print
+loop
+put looping
+loop end
+sushi

@@ -10,6 +10,8 @@ int exc_exec()
 {
     int pc=0;
     int mem=0;
+    int loopCount;
+    int loopBeginPC;
     while(mcd_isExist_mcode(pc))
     {
         if(strcmp(mcd_get_mcode(pc).opecode, "put")==0)
@@ -24,8 +26,20 @@ int exc_exec()
             mm_set_value(mcd_get_mcode(pc).parameter, mem);
         else if(strcmp(mcd_get_mcode(pc).opecode, "set")==0)
             mem = atoi(mcd_get_mcode(pc).parameter);
+        else if(strcmp(mcd_get_mcode(pc).opecode, "loop")==0)
+            if(strcmp(mcd_get_mcode(pc).parameter, "end") == 0)
+            {
+                loopCount--;
+                if(loopCount != 0)
+                    pc = loopBeginPC;
+            }
+            else
+            {
+                loopCount = mem;
+                loopBeginPC = pc;
+            }
         else
-            printf("🍣\n");
+            printf("🍣");
         pc ++;
     }
 }
