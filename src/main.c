@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "mm.h"
 #include "error.h"
 #include "parser.h"
 #include "exec.h"
